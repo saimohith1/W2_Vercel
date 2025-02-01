@@ -5,7 +5,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-marks = pd.read_json("marks.json")
+marks = pd.read_json("q-vercel-python.json")
 
 @app.route("/")
 def home():
