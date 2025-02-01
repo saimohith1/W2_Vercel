@@ -7,11 +7,11 @@ CORS(app)
 
 marks = pd.read_json("q-vercel-python.json")
 
-@app.route("/")
+@index.route("/")
 def home():
     return "Server is running!"
 
-@app.route('/api', methods=["GET"])
+@index.route('/api', methods=["GET"])
 def apiAccess():
     names = request.args.getlist('name')
     results = marks.set_index('name').loc[names]
